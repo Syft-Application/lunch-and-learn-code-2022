@@ -29,17 +29,48 @@ selector_eval_js: '.language-klipse-eval-js'
 <h1 class="title">Session 1 - Getting Started - Why and How</h1>
 <h2 class="subtitle" role="doc-subtitle"><a href="../../index.html">Lunch And Learn Code Q4 2022</a></h2>
 </header>
+<div id="outline-container-org7561640" class="outline-2">
+<h2 id="org7561640">Agenda</h2>
+<div class="outline-text-2" id="text-org7561640">
+<ul class="org-ul">
+<li>Walktrough over the overall course agenda</li>
+<li>Define basic rules and format of the sessions</li>
+<li>Get your hands "dirty" with few examples and exercises. :)</li>
+</ul>
+</div>
+</div>
+
 <div id="outline-container-org4a34506" class="outline-2">
 <h2 id="org4a34506">Prerequisites</h2>
+<div class="outline-text-2" id="text-org4a34506">
+<ul class="org-ul">
+<li>Web Browser <a href="https://www.mozilla.org/en-GB/firefox/developer/">Firefox</a> or <a href="https://www.google.com/intl/en_uk/chrome/">Google Chrome</a></li>
+</ul>
 </div>
+</div>
+
 
 <div id="outline-container-org83887f9" class="outline-2">
 <h2 id="org83887f9">Reasons to learn coding:</h2>
 <div class="outline-text-2" id="text-org83887f9">
 <ul class="org-ul">
 <li>make life easier</li>
-<li>enjoy creativity and building</li>
+<li>build apps and tools for fun and profit</li>
 <li>enhance career</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb8a6717" class="outline-2">
+<h2 id="orgb8a6717">Outcome of the course</h2>
+<div class="outline-text-2" id="text-orgb8a6717">
+<p>
+You will:
+</p>
+
+<ul class="org-ul">
+<li>gain ability to understand code, concepts and development process</li>
+<li>be able to reuse knowledge and code from this course to build your own tools</li>
 </ul>
 </div>
 </div>
@@ -48,7 +79,7 @@ selector_eval_js: '.language-klipse-eval-js'
 <h2 id="org077f088">Programming</h2>
 <div class="outline-text-2" id="text-org077f088">
 <p>
-Write -&gt; Evaluate -&gt; Feedback
+Is constant loop of <code>Write code (Programmer) -&gt; Evaluate code (computer) -&gt; Feedback (computer)</code>
 </p>
 </div>
 </div>
@@ -95,7 +126,11 @@ Bookmarklet to copy data from ACP page
 <span class="linenr">17: </span>}());
 </pre>
 </div>
-
+<pre class="example" id="org4febf5c">
+&lt;a href="javascript:(function(){const employer_name=document.querySelector('input[placeholder=&amp;quot;Brand name&amp;quot;]').value;let list=[];document.querySelectorAll('.col-md-4.col-sm-4 table tr').forEach(el=&gt;{list.push([el.querySelector('th').innerText,el.querySelector('.plain-text.DataText').innerText])});const clip=employer_name+'\n'+list.map(el=&gt;el.join('\t')).join('\n');navigator.clipboard.writeText(clip).then(()=&gt;{alert('Copied')},eror=&gt;{window.prompt(null,clip)})})();"&gt;
+ACP - Copy Employer Stats
+&lt;/a&gt;
+</pre>
 <a href="javascript:(function(){const employer_name=document.querySelector('input[placeholder=&quot;Brand name&quot;]').value;let list=[];document.querySelectorAll('.col-md-4.col-sm-4 table tr').forEach(el=>{list.push([el.querySelector('th').innerText,el.querySelector('.plain-text.DataText').innerText])});const clip=employer_name+'\n'+list.map(el=>el.join('\t')).join('\n');navigator.clipboard.writeText(clip).then(()=>{alert('Copied')},eror=>{window.prompt(null,clip)})})();">
 ACP - Copy Employer Stats
 </a></li>
@@ -123,7 +158,7 @@ ACP - Copy Employer Stats
 <ul class="org-ul">
 <li>Install `ACP - Copy Employer Stats` bookmarklet.</li>
 <li>Execute on employer page TODO: link to ACP.</li>
-<li>Create new sheet in Google Spreadsheet with your name TODO: link to Spreadsheet.</li>
+<li>Create new sheet in Google Spreadsheet with your name <a href="https://docs.google.com/spreadsheets/d/1Rq-siuj_hhmSYKGG7FjQu8341NxHjxmPEqK2nwiFaAY/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1Rq-siuj_hhmSYKGG7FjQu8341NxHjxmPEqK2nwiFaAY/edit?usp=sharing</a></li>
 <li>Paste clipboard with the data to sheet with your name.</li>
 </ul>
 </div>
@@ -146,7 +181,7 @@ ACP - Copy Employer Stats
 <div class="outline-text-3" id="text-org6991149">
 <ul class="org-ul">
 <li><p>
-Retype jigsaw picture code without comments and execute.
+Retype jigsaw picture code in area below. Comments can be ignored.
 </p>
 
 <p>
