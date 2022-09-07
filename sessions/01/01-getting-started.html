@@ -20,50 +20,47 @@ selector_eval_js: '.language-klipse-eval-js'
 <link href="../../assets/styles/jigsaw.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="org-div-home-and-up">
- <a accesskey="h" href=""> UP </a>
- |
- <a accesskey="H" href="../../index.html"> HOME </a>
-</div><div id="content" class="content">
+<div id="content" class="content">
 <header>
 <h1 class="title">Session 1 - Getting Started - Why and How</h1>
 <h2 class="subtitle" role="doc-subtitle"><a href="../../index.html">Lunch And Learn Code Q4 2022</a></h2>
 </header>
-<div id="outline-container-org7561640" class="outline-2">
-<h2 id="org7561640">Agenda</h2>
-<div class="outline-text-2" id="text-org7561640">
+<div id="outline-container-orge676b18" class="outline-2">
+<h2 id="orge676b18">Agenda</h2>
+<div class="outline-text-2" id="text-orge676b18">
 <ul class="org-ul">
-<li>Walktrough over the overall course agenda</li>
-<li>Define basic rules and format of the sessions</li>
+<li>Walktrough over the overall course agenda.</li>
+<li>Define basic rules and format of the sessions.</li>
 <li>Get your hands "dirty" with few examples and exercises. :)</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org4a34506" class="outline-2">
-<h2 id="org4a34506">Prerequisites</h2>
-<div class="outline-text-2" id="text-org4a34506">
+<div id="outline-container-orge2173a3" class="outline-2">
+<h2 id="orge2173a3">Format of the sessions</h2>
+<div class="outline-text-2" id="text-orge2173a3">
+<ul class="org-ul">
+<li>10-15 minutes presentation by lecturer (recorded)</li>
+<li>25-30 minutes individual work on exercises
+(split to small groups with assistance by available mentors)</li>
+<li>5 minutes (wrap up and Q&amp;A)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org84a52f0" class="outline-2">
+<h2 id="org84a52f0">Prerequisites</h2>
+<div class="outline-text-2" id="text-org84a52f0">
 <ul class="org-ul">
 <li>Web Browser <a href="https://www.mozilla.org/en-GB/firefox/developer/">Firefox</a> or <a href="https://www.google.com/intl/en_uk/chrome/">Google Chrome</a></li>
+<li>Zoom account</li>
 </ul>
 </div>
 </div>
 
-
-<div id="outline-container-org83887f9" class="outline-2">
-<h2 id="org83887f9">Reasons to learn coding:</h2>
-<div class="outline-text-2" id="text-org83887f9">
-<ul class="org-ul">
-<li>make life easier</li>
-<li>build apps and tools for fun and profit</li>
-<li>enhance career</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orgb8a6717" class="outline-2">
-<h2 id="orgb8a6717">Outcome of the course</h2>
-<div class="outline-text-2" id="text-orgb8a6717">
+<div id="outline-container-orge342510" class="outline-2">
+<h2 id="orge342510">Outcome of the course</h2>
+<div class="outline-text-2" id="text-orge342510">
 <p>
 You will:
 </p>
@@ -75,9 +72,20 @@ You will:
 </div>
 </div>
 
-<div id="outline-container-org077f088" class="outline-2">
-<h2 id="org077f088">Programming</h2>
-<div class="outline-text-2" id="text-org077f088">
+<div id="outline-container-orgd36ea07" class="outline-2">
+<h2 id="orgd36ea07">Reasons to learn coding:</h2>
+<div class="outline-text-2" id="text-orgd36ea07">
+<ul class="org-ul">
+<li>make life easier</li>
+<li>build apps and tools for fun and profit</li>
+<li>enhance career</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbac99c0" class="outline-2">
+<h2 id="orgbac99c0">Programming</h2>
+<div class="outline-text-2" id="text-orgbac99c0">
 <p>
 Is constant loop of <code>Write code (Programmer) -&gt; Evaluate code (computer) -&gt; Feedback (computer)</code>
 </p>
@@ -126,10 +134,8 @@ Bookmarklet to copy data from ACP page
 <span class="linenr">17: </span>}());
 </pre>
 </div>
-<pre class="example" id="org4febf5c">
-&lt;a href="javascript:(function(){const employer_name=document.querySelector('input[placeholder=&amp;quot;Brand name&amp;quot;]').value;let list=[];document.querySelectorAll('.col-md-4.col-sm-4 table tr').forEach(el=&gt;{list.push([el.querySelector('th').innerText,el.querySelector('.plain-text.DataText').innerText])});const clip=employer_name+'\n'+list.map(el=&gt;el.join('\t')).join('\n');navigator.clipboard.writeText(clip).then(()=&gt;{alert('Copied')},eror=&gt;{window.prompt(null,clip)})})();"&gt;
-ACP - Copy Employer Stats
-&lt;/a&gt;
+<pre class="example" id="org78dcd04">
+javascript:(function(){const employer_name=document.querySelector('input[placeholder=&amp;quot;Brand name&amp;quot;]').value;let list=[];document.querySelectorAll('.col-md-4.col-sm-4 table tr').forEach(el=&gt;{list.push([el.querySelector('th').innerText,el.querySelector('.plain-text.DataText').innerText])});const clip=employer_name+'\n'+list.map(el=&gt;el.join('\t')).join('\n');navigator.clipboard.writeText(clip).then(()=&gt;{alert('Copied')},eror=&gt;{window.prompt(null,clip)})})();
 </pre>
 <a href="javascript:(function(){const employer_name=document.querySelector('input[placeholder=&quot;Brand name&quot;]').value;let list=[];document.querySelectorAll('.col-md-4.col-sm-4 table tr').forEach(el=>{list.push([el.querySelector('th').innerText,el.querySelector('.plain-text.DataText').innerText])});const clip=employer_name+'\n'+list.map(el=>el.join('\t')).join('\n');navigator.clipboard.writeText(clip).then(()=>{alert('Copied')},eror=>{window.prompt(null,clip)})})();">
 ACP - Copy Employer Stats
@@ -143,30 +149,47 @@ ACP - Copy Employer Stats
 <div class="outline-text-2" id="text-exercises">
 </div>
 
-<div id="outline-container-org4ca14e6" class="outline-3">
-<h3 id="org4ca14e6">Exercise 1</h3>
-<div class="outline-text-3" id="text-org4ca14e6">
+<div id="outline-container-org2a8475e" class="outline-3">
+<h3 id="org2a8475e">Exercise 1</h3>
+<div class="outline-text-3" id="text-org2a8475e">
 <ul class="org-ul">
 <li>Install `Hello World` bookmarklet, execute and remove the bookmarklet.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orga67a905" class="outline-3">
-<h3 id="orga67a905">Exercise 2</h3>
-<div class="outline-text-3" id="text-orga67a905">
+<div id="outline-container-org9b88add" class="outline-3">
+<h3 id="org9b88add">Exercise 2</h3>
+<div class="outline-text-3" id="text-org9b88add">
 <ul class="org-ul">
 <li>Install `ACP - Copy Employer Stats` bookmarklet.</li>
-<li>Execute on employer page TODO: link to ACP.</li>
-<li>Create new sheet in Google Spreadsheet with your name <a href="https://docs.google.com/spreadsheets/d/1Rq-siuj_hhmSYKGG7FjQu8341NxHjxmPEqK2nwiFaAY/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1Rq-siuj_hhmSYKGG7FjQu8341NxHjxmPEqK2nwiFaAY/edit?usp=sharing</a></li>
+<li><p>
+Execute on employer page
+</p>
+
+<p>
+UK: <a href="https://admin.syftapp.com/entity/employers/view/37304">https://admin.syftapp.com/entity/employers/view/37304</a>
+</p>
+
+<p>
+US: <a href="https://admin.indeedflex.com/entity/employers/view/846">https://admin.indeedflex.com/entity/employers/view/846</a>
+</p></li>
+
+<li><p>
+Create new sheet in Google Spreadsheet with your name
+</p>
+
+<p>
+<a href="https://docs.google.com/spreadsheets/d/1Rq-siuj_hhmSYKGG7FjQu8341NxHjxmPEqK2nwiFaAY/edit">https://docs.google.com/spreadsheets/d/1Rq-siuj_hhmSYKGG7FjQu8341NxHjxmPEqK2nwiFaAY/edit</a>
+</p></li>
 <li>Paste clipboard with the data to sheet with your name.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgec539e1" class="outline-3">
-<h3 id="orgec539e1">Exercise 3</h3>
-<div class="outline-text-3" id="text-orgec539e1">
+<div id="outline-container-orgae83a04" class="outline-3">
+<h3 id="orgae83a04">Exercise 3</h3>
+<div class="outline-text-3" id="text-orgae83a04">
 <ul class="org-ul">
 <li>Assemble Jigsaw puzzle to valid code.</li>
 </ul>
@@ -176,9 +199,9 @@ ACP - Copy Employer Stats
 </div>
 </div>
 
-<div id="outline-container-org6991149" class="outline-3">
-<h3 id="org6991149">Exercise 4</h3>
-<div class="outline-text-3" id="text-org6991149">
+<div id="outline-container-org865d7cb" class="outline-3">
+<h3 id="org865d7cb">Exercise 4</h3>
+<div class="outline-text-3" id="text-org865d7cb">
 <ul class="org-ul">
 <li><p>
 Retype jigsaw picture code in area below. Comments can be ignored.
@@ -199,9 +222,9 @@ anything between <code>/*</code> and <code>*/</code>
 </div>
 </div>
 
-<div id="outline-container-orgfa103c5" class="outline-3">
-<h3 id="orgfa103c5">Exercise 5</h3>
-<div class="outline-text-3" id="text-orgfa103c5">
+<div id="outline-container-org76de188" class="outline-3">
+<h3 id="org76de188">Exercise 5</h3>
+<div class="outline-text-3" id="text-org76de188">
 <ul class="org-ul">
 <li>Read <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</a></li>
 </ul>
