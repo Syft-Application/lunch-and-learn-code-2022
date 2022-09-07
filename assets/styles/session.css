@@ -1,0 +1,7 @@
+div.answer .org-src-container {
+  display: none;
+}
+
+div.answer.answer-visible .org-src-container {
+  display: block;
+}
