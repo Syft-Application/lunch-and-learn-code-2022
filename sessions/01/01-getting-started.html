@@ -25,9 +25,9 @@ selector_eval_js: '.language-klipse-eval-js'
 <h1 class="title">Session 1 - Getting Started - Why and How</h1>
 <h2 class="subtitle" role="doc-subtitle"><a href="../../index.html">Lunch And Learn Code Q4 2022</a></h2>
 </header>
-<div id="outline-container-org02fc7ae" class="outline-2">
-<h2 id="org02fc7ae">Agenda</h2>
-<div class="outline-text-2" id="text-org02fc7ae">
+<div id="outline-container-org7b92a9b" class="outline-2">
+<h2 id="org7b92a9b">Agenda</h2>
+<div class="outline-text-2" id="text-org7b92a9b">
 <ul class="org-ul">
 <li>Walktrough over the overall course agenda.</li>
 <li>Define basic rules and format of the sessions.</li>
@@ -36,9 +36,9 @@ selector_eval_js: '.language-klipse-eval-js'
 </div>
 </div>
 
-<div id="outline-container-org8d4b5e3" class="outline-2">
-<h2 id="org8d4b5e3">Format of the sessions</h2>
-<div class="outline-text-2" id="text-org8d4b5e3">
+<div id="outline-container-orgb1f7ef3" class="outline-2">
+<h2 id="orgb1f7ef3">Format of the sessions</h2>
+<div class="outline-text-2" id="text-orgb1f7ef3">
 <ul class="org-ul">
 <li>10-15 minutes presentation by lecturer (recorded)</li>
 <li>25-30 minutes individual work on exercises
@@ -52,9 +52,9 @@ You can attend one or both weekly session to work on the exercises and get help 
 </div>
 </div>
 
-<div id="outline-container-orgc168cc5" class="outline-2">
-<h2 id="orgc168cc5">Prerequisites</h2>
-<div class="outline-text-2" id="text-orgc168cc5">
+<div id="outline-container-orgb9d2e06" class="outline-2">
+<h2 id="orgb9d2e06">Prerequisites</h2>
+<div class="outline-text-2" id="text-orgb9d2e06">
 <ul class="org-ul">
 <li>Web Browser <a href="https://www.mozilla.org/en-GB/firefox/developer/">Firefox</a> or <a href="https://www.google.com/intl/en_uk/chrome/">Google Chrome</a></li>
 <li>Zoom account</li>
@@ -62,9 +62,9 @@ You can attend one or both weekly session to work on the exercises and get help 
 </div>
 </div>
 
-<div id="outline-container-org8ddfbb4" class="outline-2">
-<h2 id="org8ddfbb4">Outcome of the course</h2>
-<div class="outline-text-2" id="text-org8ddfbb4">
+<div id="outline-container-org521af26" class="outline-2">
+<h2 id="org521af26">Outcome of the course</h2>
+<div class="outline-text-2" id="text-org521af26">
 <p>
 You will:
 </p>
@@ -76,9 +76,9 @@ You will:
 </div>
 </div>
 
-<div id="outline-container-orgd652a74" class="outline-2">
-<h2 id="orgd652a74">Reasons to learn coding:</h2>
-<div class="outline-text-2" id="text-orgd652a74">
+<div id="outline-container-org27c40b6" class="outline-2">
+<h2 id="org27c40b6">Reasons to learn coding:</h2>
+<div class="outline-text-2" id="text-org27c40b6">
 <ul class="org-ul">
 <li>make life easier</li>
 <li>build apps and tools for fun and profit</li>
@@ -87,9 +87,9 @@ You will:
 </div>
 </div>
 
-<div id="outline-container-orgb17b258" class="outline-2">
-<h2 id="orgb17b258">Programming</h2>
-<div class="outline-text-2" id="text-orgb17b258">
+<div id="outline-container-orgfcede34" class="outline-2">
+<h2 id="orgfcede34">Programming</h2>
+<div class="outline-text-2" id="text-orgfcede34">
 <p>
 Is constant loop of <code>Write code (programmer) -&gt; Evaluate code (computer) -&gt; Feedback (computer &amp; programmer)</code>
 </p>
@@ -109,7 +109,7 @@ Hello World
 </p>
 
 <div class="org-src-container">
-<pre class="src src-html">&lt;<span class="org-function-name">a</span> <span class="org-variable-name">href</span>=<span class="org-string">"javascript:alert('Hello%20World');"</span>&gt;Hello World&lt;/<span class="org-function-name">a</span>&gt;
+<pre class="src src-html">&lt;<span class="org-function-name">a</span> <span class="org-variable-name">href</span>=<span class="org-string">"javascript:alert('Hello World');"</span>&gt;Hello World&lt;/<span class="org-function-name">a</span>&gt;
 </pre>
 </div>
 <a href="javascript:alert('Hello%20World');">Hello World</a></li>
@@ -138,14 +138,14 @@ Bookmarklet to copy data from ACP page
 <span class="linenr">17: </span>}());
 </pre>
 </div>
-<pre class="example" id="org99171e0">
- &lt;textarea&gt;
-   javascript:(function(){const employer_name=document.querySelector('input[placeholder="Brand name"]').value;let list=[];document.querySelectorAll('.col-md-4.col-sm-4 table tr').forEach(el=&gt;{list.push([el.querySelector('th').innerText,el.querySelector('.plain-text.DataText').innerText])});const clip=employer_name+'\n'+list.map(el=&gt;el.join('\t')).join('\n');navigator.clipboard.writeText(clip).then(()=&gt;{alert('Copied')},eror=&gt;{window.prompt(null,clip)})})();
-&lt;/textarea&gt;
-</pre>
-<a href="javascript:(function(){const employer_name=document.querySelector('input[placeholder=&quot;Brand name&quot;]').value;let list=[];document.querySelectorAll('.col-md-4.col-sm-4 table tr').forEach(el=>{list.push([el.querySelector('th').innerText,el.querySelector('.plain-text.DataText').innerText])});const clip=employer_name+'\n'+list.map(el=>el.join('\t')).join('\n');navigator.clipboard.writeText(clip).then(()=>{alert('Copied')},eror=>{window.prompt(null,clip)})})();">
-ACP - Copy Employer Stats
-</a></li>
+  <textarea cols=80 rows=5>
+javascript:(function(){const employer_name=document.querySelector('input[placeholder="Brand name"]').value;let list=[];document.querySelectorAll('.col-md-4.col-sm-4 table tr').forEach(el=>{list.push([el.querySelector('th').innerText,el.querySelector('.plain-text.DataText').innerText])});const clip=employer_name+'\n'+list.map(el=>el.join('\t')).join('\n');navigator.clipboard.writeText(clip).then(()=>{alert('Copied')},eror=>{window.prompt(null,clip)})})();
+ </textarea>
+ <br/>
+
+  <a href="javascript:(function(){const employer_name=document.querySelector('input[placeholder=&quot;Brand name&quot;]').value;let list=[];document.querySelectorAll('.col-md-4.col-sm-4 table tr').forEach(el=>{list.push([el.querySelector('th').innerText,el.querySelector('.plain-text.DataText').innerText])});const clip=employer_name+'\n'+list.map(el=>el.join('\t')).join('\n');navigator.clipboard.writeText(clip).then(()=>{alert('Copied')},eror=>{window.prompt(null,clip)})})();">
+  ACP - Copy Employer Stats
+  </a></li>
 </ul>
 </div>
 </div>
@@ -155,18 +155,18 @@ ACP - Copy Employer Stats
 <div class="outline-text-2" id="text-exercises">
 </div>
 
-<div id="outline-container-orgdc3d1be" class="outline-3">
-<h3 id="orgdc3d1be">Exercise 1</h3>
-<div class="outline-text-3" id="text-orgdc3d1be">
+<div id="outline-container-orgca0674d" class="outline-3">
+<h3 id="orgca0674d">Exercise 1</h3>
+<div class="outline-text-3" id="text-orgca0674d">
 <ul class="org-ul">
 <li>Install `Hello World` bookmarklet, execute and remove the bookmarklet.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgced9878" class="outline-3">
-<h3 id="orgced9878">Exercise 2</h3>
-<div class="outline-text-3" id="text-orgced9878">
+<div id="outline-container-org3fefdc5" class="outline-3">
+<h3 id="org3fefdc5">Exercise 2</h3>
+<div class="outline-text-3" id="text-org3fefdc5">
 <ul class="org-ul">
 <li>Install `ACP - Copy Employer Stats` bookmarklet.</li>
 <li><p>
@@ -193,9 +193,9 @@ Create new sheet in Google Spreadsheet with your name
 </div>
 </div>
 
-<div id="outline-container-org576049b" class="outline-3">
-<h3 id="org576049b">Exercise 3</h3>
-<div class="outline-text-3" id="text-org576049b">
+<div id="outline-container-org214e990" class="outline-3">
+<h3 id="org214e990">Exercise 3</h3>
+<div class="outline-text-3" id="text-org214e990">
 <ul class="org-ul">
 <li>Assemble Jigsaw puzzle to valid code.</li>
 </ul>
@@ -205,9 +205,9 @@ Create new sheet in Google Spreadsheet with your name
 </div>
 </div>
 
-<div id="outline-container-orge4c6440" class="outline-3">
-<h3 id="orge4c6440">Exercise 4</h3>
-<div class="outline-text-3" id="text-orge4c6440">
+<div id="outline-container-org15f41e1" class="outline-3">
+<h3 id="org15f41e1">Exercise 4</h3>
+<div class="outline-text-3" id="text-org15f41e1">
 <ul class="org-ul">
 <li><p>
 Retype jigsaw picture code in area below. Comments can be ignored.
@@ -230,9 +230,9 @@ anything between <code>/*</code> and <code>*/</code>
 </div>
 </div>
 
-<div id="outline-container-orga72cf98" class="outline-3">
-<h3 id="orga72cf98">Exercise 5 (homework)</h3>
-<div class="outline-text-3" id="text-orga72cf98">
+<div id="outline-container-orga7e57f1" class="outline-3">
+<h3 id="orga7e57f1">Exercise 5 (homework)</h3>
+<div class="outline-text-3" id="text-orga7e57f1">
 <ul class="org-ul">
 <li>Read <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started</a></li>
 <li>Read <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</a></li>
