@@ -25,9 +25,9 @@ selector_eval_js: '.language-klipse-eval-js'
 <h1 class="title">Session 1 - Getting Started - Why and How</h1>
 <h2 class="subtitle" role="doc-subtitle"><a href="../../index.html">Lunch And Learn Code Q4 2022</a></h2>
 </header>
-<div id="outline-container-orge676b18" class="outline-2">
-<h2 id="orge676b18">Agenda</h2>
-<div class="outline-text-2" id="text-orge676b18">
+<div id="outline-container-orgd83fd6d" class="outline-2">
+<h2 id="orgd83fd6d">Agenda</h2>
+<div class="outline-text-2" id="text-orgd83fd6d">
 <ul class="org-ul">
 <li>Walktrough over the overall course agenda.</li>
 <li>Define basic rules and format of the sessions.</li>
@@ -36,21 +36,25 @@ selector_eval_js: '.language-klipse-eval-js'
 </div>
 </div>
 
-<div id="outline-container-orge2173a3" class="outline-2">
-<h2 id="orge2173a3">Format of the sessions</h2>
-<div class="outline-text-2" id="text-orge2173a3">
+<div id="outline-container-orgd30f5b1" class="outline-2">
+<h2 id="orgd30f5b1">Format of the sessions</h2>
+<div class="outline-text-2" id="text-orgd30f5b1">
 <ul class="org-ul">
 <li>10-15 minutes presentation by lecturer (recorded)</li>
 <li>25-30 minutes individual work on exercises
 (split to small groups with assistance by available mentors)</li>
-<li>5 minutes (wrap up and Q&amp;A)</li>
+<li>5-10 minutes (Demos, wrap up and Q&amp;A)</li>
 </ul>
+
+<p>
+You can attend one or both weekly session to work on the exercises and get help by mentors.
+</p>
 </div>
 </div>
 
-<div id="outline-container-org84a52f0" class="outline-2">
-<h2 id="org84a52f0">Prerequisites</h2>
-<div class="outline-text-2" id="text-org84a52f0">
+<div id="outline-container-orgde2e399" class="outline-2">
+<h2 id="orgde2e399">Prerequisites</h2>
+<div class="outline-text-2" id="text-orgde2e399">
 <ul class="org-ul">
 <li>Web Browser <a href="https://www.mozilla.org/en-GB/firefox/developer/">Firefox</a> or <a href="https://www.google.com/intl/en_uk/chrome/">Google Chrome</a></li>
 <li>Zoom account</li>
@@ -58,9 +62,9 @@ selector_eval_js: '.language-klipse-eval-js'
 </div>
 </div>
 
-<div id="outline-container-orge342510" class="outline-2">
-<h2 id="orge342510">Outcome of the course</h2>
-<div class="outline-text-2" id="text-orge342510">
+<div id="outline-container-org701c6c6" class="outline-2">
+<h2 id="org701c6c6">Outcome of the course</h2>
+<div class="outline-text-2" id="text-org701c6c6">
 <p>
 You will:
 </p>
@@ -72,9 +76,9 @@ You will:
 </div>
 </div>
 
-<div id="outline-container-orgd36ea07" class="outline-2">
-<h2 id="orgd36ea07">Reasons to learn coding:</h2>
-<div class="outline-text-2" id="text-orgd36ea07">
+<div id="outline-container-org426166c" class="outline-2">
+<h2 id="org426166c">Reasons to learn coding:</h2>
+<div class="outline-text-2" id="text-org426166c">
 <ul class="org-ul">
 <li>make life easier</li>
 <li>build apps and tools for fun and profit</li>
@@ -83,9 +87,9 @@ You will:
 </div>
 </div>
 
-<div id="outline-container-orgbac99c0" class="outline-2">
-<h2 id="orgbac99c0">Programming</h2>
-<div class="outline-text-2" id="text-orgbac99c0">
+<div id="outline-container-org47b4d8b" class="outline-2">
+<h2 id="org47b4d8b">Programming</h2>
+<div class="outline-text-2" id="text-org47b4d8b">
 <p>
 Is constant loop of <code>Write code (Programmer) -&gt; Evaluate code (computer) -&gt; Feedback (computer)</code>
 </p>
@@ -134,8 +138,8 @@ Bookmarklet to copy data from ACP page
 <span class="linenr">17: </span>}());
 </pre>
 </div>
-<pre class="example" id="org78dcd04">
-javascript:(function(){const employer_name=document.querySelector('input[placeholder=&amp;quot;Brand name&amp;quot;]').value;let list=[];document.querySelectorAll('.col-md-4.col-sm-4 table tr').forEach(el=&gt;{list.push([el.querySelector('th').innerText,el.querySelector('.plain-text.DataText').innerText])});const clip=employer_name+'\n'+list.map(el=&gt;el.join('\t')).join('\n');navigator.clipboard.writeText(clip).then(()=&gt;{alert('Copied')},eror=&gt;{window.prompt(null,clip)})})();
+<pre class="example" id="orgffd653c">
+javascript:(function(){const employer_name=document.querySelector('input[placeholder="Brand name"]').value;let list=[];document.querySelectorAll('.col-md-4.col-sm-4 table tr').forEach(el=&gt;{list.push([el.querySelector('th').innerText,el.querySelector('.plain-text.DataText').innerText])});const clip=employer_name+'\n'+list.map(el=&gt;el.join('\t')).join('\n');navigator.clipboard.writeText(clip).then(()=&gt;{alert('Copied')},eror=&gt;{window.prompt(null,clip)})})();
 </pre>
 <a href="javascript:(function(){const employer_name=document.querySelector('input[placeholder=&quot;Brand name&quot;]').value;let list=[];document.querySelectorAll('.col-md-4.col-sm-4 table tr').forEach(el=>{list.push([el.querySelector('th').innerText,el.querySelector('.plain-text.DataText').innerText])});const clip=employer_name+'\n'+list.map(el=>el.join('\t')).join('\n');navigator.clipboard.writeText(clip).then(()=>{alert('Copied')},eror=>{window.prompt(null,clip)})})();">
 ACP - Copy Employer Stats
@@ -149,18 +153,18 @@ ACP - Copy Employer Stats
 <div class="outline-text-2" id="text-exercises">
 </div>
 
-<div id="outline-container-org2a8475e" class="outline-3">
-<h3 id="org2a8475e">Exercise 1</h3>
-<div class="outline-text-3" id="text-org2a8475e">
+<div id="outline-container-orgf22cf69" class="outline-3">
+<h3 id="orgf22cf69">Exercise 1</h3>
+<div class="outline-text-3" id="text-orgf22cf69">
 <ul class="org-ul">
 <li>Install `Hello World` bookmarklet, execute and remove the bookmarklet.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org9b88add" class="outline-3">
-<h3 id="org9b88add">Exercise 2</h3>
-<div class="outline-text-3" id="text-org9b88add">
+<div id="outline-container-org85d585f" class="outline-3">
+<h3 id="org85d585f">Exercise 2</h3>
+<div class="outline-text-3" id="text-org85d585f">
 <ul class="org-ul">
 <li>Install `ACP - Copy Employer Stats` bookmarklet.</li>
 <li><p>
@@ -187,9 +191,9 @@ Create new sheet in Google Spreadsheet with your name
 </div>
 </div>
 
-<div id="outline-container-orgae83a04" class="outline-3">
-<h3 id="orgae83a04">Exercise 3</h3>
-<div class="outline-text-3" id="text-orgae83a04">
+<div id="outline-container-org42b6b14" class="outline-3">
+<h3 id="org42b6b14">Exercise 3</h3>
+<div class="outline-text-3" id="text-org42b6b14">
 <ul class="org-ul">
 <li>Assemble Jigsaw puzzle to valid code.</li>
 </ul>
@@ -199,9 +203,9 @@ Create new sheet in Google Spreadsheet with your name
 </div>
 </div>
 
-<div id="outline-container-org865d7cb" class="outline-3">
-<h3 id="org865d7cb">Exercise 4</h3>
-<div class="outline-text-3" id="text-org865d7cb">
+<div id="outline-container-org34e4869" class="outline-3">
+<h3 id="org34e4869">Exercise 4</h3>
+<div class="outline-text-3" id="text-org34e4869">
 <ul class="org-ul">
 <li><p>
 Retype jigsaw picture code in area below. Comments can be ignored.
@@ -213,7 +217,8 @@ anything between <code>/*</code> and <code>*/</code>
 </p>
 
 <div class="language-klipse-eval-js" ><div class="org-src-container">
-<pre class="src src-js"><span class="org-comment-delimiter">// </span><span class="org-comment">type your code here</span>
+<pre class="src src-js"><span class="org-comment-delimiter">// </span><span class="org-comment">type your</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">code here</span>
 </pre>
 </div></div></li>
 </ul>
@@ -222,10 +227,11 @@ anything between <code>/*</code> and <code>*/</code>
 </div>
 </div>
 
-<div id="outline-container-org76de188" class="outline-3">
-<h3 id="org76de188">Exercise 5</h3>
-<div class="outline-text-3" id="text-org76de188">
+<div id="outline-container-orgee94248" class="outline-3">
+<h3 id="orgee94248">Exercise 5 (homework)</h3>
+<div class="outline-text-3" id="text-orgee94248">
 <ul class="org-ul">
+<li>Read <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started</a></li>
 <li>Read <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript</a></li>
 </ul>
 </div>
