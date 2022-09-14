@@ -5,7 +5,7 @@ input,textarea,select,button,option, body {
   font-family: system-ui, "Helvetica Neue",Helvetica,Arial,sans-serif
 }
 
-pre,code,kbd,samp,var,output{font:0.9rem Menlo,Monaco,Consolas,"Courier New",monospace}
+pre,code,kbd,samp,var,output{font-family: Menlo,Monaco,Consolas,"Courier New",monospace}
 h1,h2,h3,h4,h5,h6{color:#000;margin-bottom:1.125rem}
 h1{font-size:2.25rem;font-weight:500;line-height:2.7rem}
 h2{font-size:1.575rem;font-weight:400;line-height:2.1375rem}
@@ -35,6 +35,18 @@ header p {
   margin-bottom: 1rem;
 }
 
+thead tr {
+}
+
+thead th {
+  padding: 0.5em;
+  border-bottom: solid 1px;
+}
+
+tbody td {
+  padding: 0.25em 0.5em;
+}
+
 h1.title {
   margin-top: 0;
 }
@@ -44,6 +56,14 @@ h2.subtitle {
   /* font-weight: normal; */
   /* color: #777; */
   /* font-size: 0.8em; */
+}
+
+#content {
+  max-width: 960px;
+}
+
+#content p {
+  max-width: 640px;
 }
 
 #tabs {
@@ -76,4 +96,23 @@ h2.subtitle {
 
 .linenr {
   color: #aaa;
+}
+
+.klipse-snippet {
+  margin-bottom: 0.25em;
+  font-size: 1.1em;
+}
+
+.klipse-result {
+  margin-bottom: 2em;
+}
+
+.klipse-result::before {
+  color: #999;
+  content: 'result of evaluation:';
+  font-size: 0.85em;
+}
+
+.klipse-separator {
+
 }

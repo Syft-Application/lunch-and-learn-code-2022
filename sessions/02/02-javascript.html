@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Session 1 - Getting Started - Why and How</title>
+<title>Session 2 - JavaScript</title>
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="../../assets/styles/vendor/normalize.css"/>
 <link rel="stylesheet" type="text/css" href="../../assets/styles/vendor/htmlize.css"/>
@@ -20,27 +19,546 @@ selector_eval_js: '.language-klipse-eval-js'
 </script>
 </head>
 <body>
-<div id="org-div-home-and-up">
- <a accesskey="h" href=""> UP </a>
- |
- <a accesskey="H" href="../../index.html"> HOME </a>
-</div><div id="content" class="content">
+<div id="content" class="content">
 <header>
-<h1 class="title">Session 1 - Getting Started - Why and How</h1>
-<p class="subtitle" role="doc-subtitle">Lunch And Learn Code Q4 2022</p>
-</header>
-
-<div id="outline-container-orge1c2357" class="outline-2">
-<h2 id="orge1c2357">Agenda</h2>
-<div class="outline-text-2" id="text-orge1c2357">
-<ul class="org-ul">
-<li>Walktrough over the overall course agenda.</li>
-<li>Define basic rules and format of the sessions.</li>
-<li>Get your hands "dirty" with few examples and exercises. :)</li>
+<h1 class="title">Session 2 - JavaScript</h1>
+<h2 class="subtitle" role="doc-subtitle"><a href="../../index.html">Lunch And Learn Code Q4 2022</a></h2>
+</header><nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org9d02a26">Values and Data Types</a></li>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#conditionals">Conditionals</a></li>
+<li><a href="#functions">Functions</a></li>
+<li><a href="#exercises">Exercises</a></li>
 </ul>
+</div>
+</nav>
+
+<div id="outline-container-org9d02a26" class="outline-2">
+<h2 id="org9d02a26">Values and Data Types</h2>
+<div class="outline-text-2" id="text-org9d02a26">
 <p>
-i ./sessions/02/02-javascript.org-t-
+Programming Language consist of <i>keywords</i> (function, if, return ..),
+<i>values</i> (13, 'abc', true), <i>symbols</i> (;, }, {, [ &#x2026;) and <i>operators</i> (+, i,..)
+arranged in way (syntax) that make sense to computer.
+Values are "built-in objects" that computer evaluates to themselves and can be different types.<br>
+We can use <i>special</i> operator <code>typeof</code> to determine type of value.
 </p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">typeof</span> 3
+</pre>
+</div></div>
+</div>
+
+
+<div id="outline-container-org0d1914d" class="outline-3">
+<h3 id="org0d1914d">Numbers</h3>
+<div class="outline-text-3" id="text-org0d1914d">
+<div class="org-src-container">
+<pre class="src src-js">123 <span class="org-comment-delimiter">// </span><span class="org-comment">Integer</span>
+3.14159265358979 <span class="org-comment-delimiter">// </span><span class="org-comment">Float number</span>
+-24.01 <span class="org-comment-delimiter">// </span><span class="org-comment">Negative number</span>
+<span class="org-constant">Infinity</span>
+</pre>
+</div>
+
+<p>
+Operations
+</p>
+<div class="org-src-container">
+<pre class="src src-js">+, -, *, <span class="org-string">/,</span>
+</pre>
+</div>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js">2 + 2
+</pre>
+</div></div>
+
+<p>
+Use parenthesis to specify operator precedence.
+</p>
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js">(1 + 2) * (3 - 4) / 5
+</pre>
+</div></div>
+</div>
+</div>
+
+<div id="outline-container-orge470cc2" class="outline-3">
+<h3 id="orge470cc2">Text</h3>
+<div class="outline-text-3" id="text-orge470cc2">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-string">'Sample single line text using quotes'</span>
+</pre>
+</div></div>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-string">`Sample multi line</span>
+<span class="org-string">  text using backticks \` `</span>
+</pre>
+</div></div>
+
+<p>
+We can use <code>${}</code> when using backticks <code>`</code> to insert another value inside string.
+</p>
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-string">`A bout de souffle, ${1960}`</span>
+</pre>
+</div></div>
+
+<p>
+We can also use <code>+</code> operator to join strings together.
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-string">'Spaghetti'</span> + <span class="org-string">' with '</span> + <span class="org-string">'tomato sauce'</span>
+</pre>
+</div></div>
+</div>
+</div>
+
+<div id="outline-container-org4973593" class="outline-3">
+<h3 id="org4973593">Boolean</h3>
+<div class="outline-text-3" id="text-org4973593">
+<div class="org-src-container">
+<pre class="src src-js"><span class="org-constant">true</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-js"><span class="org-constant">false</span>
+</pre>
+</div>
+
+<p>
+Mostly used in conditionals to evaluate truthiness of given expression.
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js">1 == 1
+</pre>
+</div></div>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js">2 == 3
+</pre>
+</div></div>
+</div>
+</div>
+
+<div id="outline-container-org9bfa7b1" class="outline-3">
+<h3 id="org9bfa7b1">Objects</h3>
+<div class="outline-text-3" id="text-org9bfa7b1">
+<p>
+Key value pairs.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-js">{
+  key: <span class="org-string">'value'</span>,
+  <span class="org-string">'also key'</span> =&gt; <span class="org-string">'another value'</span>,
+  third_key: 12345
+}
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgb40a980" class="outline-3">
+<h3 id="orgb40a980">Collections</h3>
+<div class="outline-text-3" id="text-orgb40a980">
+<p>
+Array defined using square brackets <code>[]</code>
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js">[33, <span class="org-string">'A'</span>, <span class="org-string">'Pizza'</span>, <span class="org-constant">false</span>, 2.45]
+</pre>
+</div></div>
+
+<p>
+Array can also contain nested <code>array</code>
+</p>
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js">[[1, 2], [3, 4], [[5, 6], <span class="org-string">'b'</span>]]
+</pre>
+</div></div>
+
+<p>
+:CUSTOM_ID: values
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-variables" class="outline-2">
+<h2 id="variables">Variables</h2>
+<div class="outline-text-2" id="text-variables">
+<p>
+Allow us to give values names.
+</p>
+<div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">let</span> <span class="org-variable-name">a</span> = 123;
+<span class="org-keyword">let</span> <span class="org-variable-name">b</span> = <span class="org-string">'abc'</span>;
+</pre>
+</div>
+
+<p>
+<code>const</code> keyword defines <i>constant</i> (Something that can not be changed later.)
+</p>
+<div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">const</span> <span class="org-variable-name">C</span> = <span class="org-string">'Fish'</span>;
+</pre>
+</div>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">let</span> <span class="org-variable-name">a</span> = 3;
+<span class="org-keyword">let</span> <span class="org-variable-name">b</span> = 7;
+
+a + b;
+</pre>
+</div></div>
+</div>
+</div>
+
+<div id="outline-container-conditionals" class="outline-2">
+<h2 id="conditionals">Conditionals</h2>
+<div class="outline-text-2" id="text-conditionals">
+<div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">if</span> (condition) {
+  <span class="org-comment-delimiter">/* </span><span class="org-comment">code to run if condition is true</span><span class="org-comment-delimiter"> */</span>
+} <span class="org-keyword">else</span> {
+  <span class="org-comment-delimiter">/* </span><span class="org-comment">run some other code instead</span><span class="org-comment-delimiter"> */</span>
+}
+</pre>
+</div>
+
+<p>
+A <code>condition</code> represents something that is evaluated to <code>true</code> or <code>false</code>
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">if</span> (2 == 7) {
+  <span class="org-string">'this will not be evaluated and result is undefined'</span>;
+}
+</pre>
+</div></div>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">if</span> (<span class="org-string">'a string'</span> == <span class="org-string">'another string'</span>) {
+  <span class="org-string">'this will not be evaluated'</span>;
+} <span class="org-keyword">else</span> {
+  <span class="org-string">'inside of the else branch will be evaluated'</span>;
+}
+</pre>
+</div></div>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">let</span> <span class="org-variable-name">a</span> = 1;
+<span class="org-keyword">let</span> <span class="org-variable-name">b</span> = 2;
+<span class="org-keyword">let</span> <span class="org-variable-name">c</span> = 3;
+
+<span class="org-keyword">if</span> (a == 3) {
+  <span class="org-string">'a is equal to 3'</span>;
+} <span class="org-keyword">else</span> <span class="org-keyword">if</span> (b == 3) {
+  <span class="org-string">'b is equal to 3'</span>;
+} <span class="org-keyword">else</span> <span class="org-keyword">if</span> (c == 3) {
+  <span class="org-string">'c is equal to 3'</span>;
+} <span class="org-keyword">else</span> {
+  <span class="org-string">'nothing equals to 3'</span>
+}
+</pre>
+</div></div>
+
+<p>
+Conditions can be combined together using "and" operator <code>&amp;&amp;</code> or "or" operator <i>||</i>.
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js">2 == 2 &amp;&amp; 3 == 3 || <span class="org-constant">false</span>;
+</pre>
+</div></div>
+
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals</a>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-functions" class="outline-2">
+<h2 id="functions">Functions</h2>
+<div class="outline-text-2" id="text-functions">
+<p>
+Define piece of code that can be evaluated later.
+</p>
+
+<p>
+Function definition:
+</p>
+<div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">function</span> <span class="org-function-name">meaningOfLife</span>() {
+  <span class="org-keyword">return</span> 42;
+}
+</pre>
+</div>
+
+<p>
+Function evaluation:
+</p>
+<div class="org-src-container">
+<pre class="src src-js">meaningOfLife();
+</pre>
+</div>
+
+<p>
+Functions can have parameters
+</p>
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">function</span> <span class="org-function-name">plusTwo</span>(<span class="org-variable-name">n</span>) {
+  <span class="org-keyword">return</span> n + 2;
+}
+
+plusTwo(31);
+</pre>
+</div></div>
+
+<p>
+We need to make sure that value we pass as argument make sense
+otherwise the result of evaluation can be unexpected.
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">function</span> <span class="org-function-name">plusFour</span>(<span class="org-variable-name">n</span>) {
+  <span class="org-keyword">return</span> n + 2;
+}
+
+plusFour(<span class="org-string">'seven'</span>);
+</pre>
+</div></div>
+
+<p>
+For now we can consider two types of functions:
+</p>
+
+<ul class="org-ul">
+<li>built-in functions</li>
+<li>ours</li>
+</ul>
+
+<p>
+Combination of these two allow us write useful programs.
+</p>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-exercises" class="outline-2">
+<h2 id="exercises">Exercises</h2>
+<div class="outline-text-2" id="text-exercises">
+<ul class="org-ul">
+<li><p>
+1, Determine types of values using <i>typeof</i> operator.
+</p>
+
+<p>
+Values: <code>23</code>, <code>false</code>, <code>[2]</code>, <i>'hello'</i>, <i>window</i>, <i>window.alert</i>
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">typeof</span> x; <span class="org-comment-delimiter">// </span><span class="org-comment">replace x with value</span>
+</pre>
+</div></div></li>
+
+<li><p>
+2, Define variables a, b, c.
+Value of <code>a</code> should <code>10</code>, value of <code>b</code> is <code>5</code> and value of <code>c</code> combination of <code>a</code> and <code>b</code>.
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">let</span> <span class="org-variable-name">a</span> <span class="org-comment-delimiter">// </span><span class="org-comment">fill the rest</span>
+</pre>
+</div></div></li>
+
+<li><p>
+3, Define function that will determine a human stage of life based on age.
+</p>
+
+<p>
+The function should receive one parameter <i>age</i> as a number and return a string.
+</p>
+
+<pre class="example" id="orgafcbd68">
+Infant = 0-1 year.
+Toddler = 2-4 yrs.
+Child = 5-12 yrs.
+Teen = 13-18 yrs.
+Adult = 18-65 yrs
+Senior = 65+
+</pre>
+
+<p>
+We can use comparison operators to compare numbers.
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">operator</th>
+<th scope="col" class="org-left">symbol</th>
+<th scope="col" class="org-left">example that evaluates to true</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">equal</td>
+<td class="org-left">==</td>
+<td class="org-left">2 == 2</td>
+</tr>
+
+<tr>
+<td class="org-left">less than</td>
+<td class="org-left">&lt;</td>
+<td class="org-left">1 &lt; 2</td>
+</tr>
+
+<tr>
+<td class="org-left">greater than</td>
+<td class="org-left">&gt;</td>
+<td class="org-left">3 &gt; 2</td>
+</tr>
+
+<tr>
+<td class="org-left">less or equal</td>
+<td class="org-left">&lt;=</td>
+<td class="org-left">1 &lt;= 1</td>
+</tr>
+
+<tr>
+<td class="org-left">greater or equal</td>
+<td class="org-left">&gt;=</td>
+<td class="org-left">301 &gt; 300</td>
+</tr>
+
+<tr>
+<td class="org-left">inequal</td>
+<td class="org-left">!=</td>
+<td class="org-left">4 != 5</td>
+</tr>
+</tbody>
+</table>
+
+<pre class="example" id="orgf92902f">
+stageOfLife(7); =&gt; 'Child'
+stageOfLife(47); =&gt; 'Adult'
+</pre>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">function</span> <span class="org-comment-delimiter">// </span><span class="org-comment">fill the rest</span>
+</pre>
+</div></div></li>
+
+<li><p>
+4, Define function that will accept three parameters as arguments and returns result of multiplication.
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">input</th>
+<th scope="col" class="org-right">expected output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">2, 3, 4</td>
+<td class="org-right">24</td>
+</tr>
+
+<tr>
+<td class="org-left">7, -1, 3</td>
+<td class="org-right">-21</td>
+</tr>
+</tbody>
+</table>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">function</span> <span class="org-comment-delimiter">// </span><span class="org-comment">fill the rest</span>
+</pre>
+</div></div></li>
+
+<li><p>
+5, Define function that will accept two arguments <code>name</code> and <code>language</code> and returns greeting in given language.
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">input</th>
+<th scope="col" class="org-left">expected output message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">'John', 'English'</td>
+<td class="org-left">Hello John</td>
+</tr>
+
+<tr>
+<td class="org-left">'Suzy', 'Japanese'</td>
+<td class="org-left">こんにちは Suzy</td>
+</tr>
+
+<tr>
+<td class="org-left">'Alfred', 'french'</td>
+<td class="org-left">Bonjour Alfred</td>
+</tr>
+
+<tr>
+<td class="org-left">'Marek', 'Slovak'</td>
+<td class="org-left">Sorry don't speak in Slovak language</td>
+</tr>
+</tbody>
+</table>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-comment-delimiter">// </span><span class="org-comment">fill the rest</span>
+</pre>
+</div></div></li>
+</ul>
+
+<script type="text/javascript" src="../../assets/klipse/klipse_plugin.min.js"></script>
 </div>
 </div>
 </div>
