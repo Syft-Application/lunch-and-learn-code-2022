@@ -27,7 +27,7 @@ selector_eval_js: '.language-klipse-eval-js'
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgb72f2a8">Values and Data Types</a></li>
+<li><a href="#org27bae7e">Values and Data Types</a></li>
 <li><a href="#variables">Variables</a></li>
 <li><a href="#conditionals">Conditionals</a></li>
 <li><a href="#functions">Functions</a></li>
@@ -36,9 +36,9 @@ selector_eval_js: '.language-klipse-eval-js'
 </div>
 </nav>
 
-<div id="outline-container-orgb72f2a8" class="outline-2">
-<h2 id="orgb72f2a8">Values and Data Types</h2>
-<div class="outline-text-2" id="text-orgb72f2a8">
+<div id="outline-container-org27bae7e" class="outline-2">
+<h2 id="org27bae7e">Values and Data Types</h2>
+<div class="outline-text-2" id="text-org27bae7e">
 <p>
 Programming Language consist of <i>keywords</i> (function, if, return ..),
 <i>values</i> (13, 'abc', true), <i>symbols</i> (;, }, {, [ &#x2026;) and <i>operators</i> (+, i,..)
@@ -54,9 +54,9 @@ We can use <i>special</i> operator <code>typeof</code> to determine type of valu
 </div>
 
 
-<div id="outline-container-orgbae0282" class="outline-3">
-<h3 id="orgbae0282">Numbers</h3>
-<div class="outline-text-3" id="text-orgbae0282">
+<div id="outline-container-org827ea78" class="outline-3">
+<h3 id="org827ea78">Numbers</h3>
+<div class="outline-text-3" id="text-org827ea78">
 <div class="org-src-container">
 <pre class="src src-js">123 <span class="org-comment-delimiter">// </span><span class="org-comment">Integer</span>
 3.14159265358979 <span class="org-comment-delimiter">// </span><span class="org-comment">Float number</span>
@@ -88,9 +88,9 @@ Use parenthesis to specify operator precedence.
 </div>
 </div>
 
-<div id="outline-container-orgb02451a" class="outline-3">
-<h3 id="orgb02451a">Text</h3>
-<div class="outline-text-3" id="text-orgb02451a">
+<div id="outline-container-orgcc255de" class="outline-3">
+<h3 id="orgcc255de">Text</h3>
+<div class="outline-text-3" id="text-orgcc255de">
 <p>
 Strings are characters enclosed inside quotes (single quotes <code>'</code> , double quotes <code>"</code> or backticks <code>`</code>)
 </p>
@@ -130,9 +130,9 @@ We can also use <code>+</code> operator to join strings together.
 </div>
 </div>
 
-<div id="outline-container-org9ea3954" class="outline-3">
-<h3 id="org9ea3954">Boolean</h3>
-<div class="outline-text-3" id="text-org9ea3954">
+<div id="outline-container-org3beafc5" class="outline-3">
+<h3 id="org3beafc5">Boolean</h3>
+<div class="outline-text-3" id="text-org3beafc5">
 <div class="org-src-container">
 <pre class="src src-js"><span class="org-constant">true</span>
 </pre>
@@ -159,9 +159,9 @@ Mostly used in conditionals to evaluate truthiness of given expression.
 </div>
 </div>
 
-<div id="outline-container-orge68a54c" class="outline-3">
-<h3 id="orge68a54c">Objects</h3>
-<div class="outline-text-3" id="text-orge68a54c">
+<div id="outline-container-org1b57907" class="outline-3">
+<h3 id="org1b57907">Objects</h3>
+<div class="outline-text-3" id="text-org1b57907">
 <p>
 Key value pairs.
 </p>
@@ -402,7 +402,7 @@ Value of <code>a</code> should <code>10</code>, value of <code>b</code> is <code
 The function should receive one parameter <i>age</i> as a number and return a string.
 </p>
 
-<pre class="example" id="org842ef6b">
+<pre class="example" id="org068b15d">
 Infant = 0-1 year.
 Toddler = 2-4 yrs.
 Child = 5-12 yrs.
@@ -470,7 +470,7 @@ We can use comparison operators to compare numbers.
 </tbody>
 </table>
 
-<pre class="example" id="org46296c1">
+<pre class="example" id="orgdd66908">
 stageOfLife(7); =&gt; 'Child'
 stageOfLife(47); =&gt; 'Adult'
 </pre>
@@ -537,22 +537,22 @@ stageOfLife(47); =&gt; 'Adult'
 <tbody>
 <tr>
 <td class="org-left">'John', 'English'</td>
-<td class="org-left">Hello John</td>
+<td class="org-left">"Hello John"</td>
 </tr>
 
 <tr>
 <td class="org-left">'Suzy', 'Japanese'</td>
-<td class="org-left">こんにちは Suzy</td>
+<td class="org-left">"こんにちは Suzy"</td>
 </tr>
 
 <tr>
 <td class="org-left">'Alfred', 'French'</td>
-<td class="org-left">Bonjour Alfred</td>
+<td class="org-left">"Bonjour Alfred"</td>
 </tr>
 
 <tr>
 <td class="org-left">'Marek', 'Slovak'</td>
-<td class="org-left">Sorry don't speak in Slovak language</td>
+<td class="org-left">"Sorry don't speak in Slovak language"</td>
 </tr>
 </tbody>
 </table>
@@ -564,9 +564,20 @@ stageOfLife(47); =&gt; 'Adult'
 </ul>
 </div>
 
-<div id="outline-container-orgb5c1f93" class="outline-3">
-<h3 id="orgb5c1f93">Homework</h3>
-<div class="outline-text-3" id="text-orgb5c1f93">
+<div id="outline-container-org08200a2" class="outline-3">
+<h3 id="org08200a2">Answers submision</h3>
+<div class="outline-text-3" id="text-org08200a2">
+<p>
+Please once done the exercise copy and paste your answers through google form
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSc1v8Ft90a66N2PxM97GasOvmKDUJA-eqXUKSgQMowjm4rFiw/viewform?usp=sf_link">https://docs.google.com/forms/d/e/1FAIpQLSc1v8Ft90a66N2PxM97GasOvmKDUJA-eqXUKSgQMowjm4rFiw/viewform?usp=sf_link</a>
+</p>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc1v8Ft90a66N2PxM97GasOvmKDUJA-eqXUKSgQMowjm4rFiw/viewform?embedded=true" width="640" height="1961" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+</div>
+
+<div id="outline-container-orged617f6" class="outline-3">
+<h3 id="orged617f6">Homework</h3>
+<div class="outline-text-3" id="text-orged617f6">
 <p>
 Read through documentation
 </p>
