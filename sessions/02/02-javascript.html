@@ -27,7 +27,7 @@ selector_eval_js: '.language-klipse-eval-js'
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org45aa488">Values and Data Types</a></li>
+<li><a href="#orgefe8593">Values and Data Types</a></li>
 <li><a href="#variables">Variables</a></li>
 <li><a href="#conditionals">Conditionals</a></li>
 <li><a href="#functions">Functions</a></li>
@@ -36,9 +36,9 @@ selector_eval_js: '.language-klipse-eval-js'
 </div>
 </nav>
 
-<div id="outline-container-org45aa488" class="outline-2">
-<h2 id="org45aa488">Values and Data Types</h2>
-<div class="outline-text-2" id="text-org45aa488">
+<div id="outline-container-orgefe8593" class="outline-2">
+<h2 id="orgefe8593">Values and Data Types</h2>
+<div class="outline-text-2" id="text-orgefe8593">
 <p>
 Programming Language consist of <i>keywords</i> (function, if, return ..),
 <i>values</i> (13, 'abc', true), <i>symbols</i> (;, }, {, [ &#x2026;) and <i>operators</i> (+, i,..)
@@ -47,16 +47,16 @@ Values are "built-in objects" that computer evaluates to themselves and can be d
 We can use <i>special</i> operator <code>typeof</code> to determine type of value.
 </p>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js"><span class="org-keyword">typeof</span> 3
 </pre>
-</div>
+</div></div>
 </div>
 
 
-<div id="outline-container-org2733b12" class="outline-3">
-<h3 id="org2733b12">Numbers</h3>
-<div class="outline-text-3" id="text-org2733b12">
+<div id="outline-container-org92f5be8" class="outline-3">
+<h3 id="org92f5be8">Numbers</h3>
+<div class="outline-text-3" id="text-org92f5be8">
 <div class="org-src-container">
 <pre class="src src-js">123 <span class="org-comment-delimiter">// </span><span class="org-comment">Integer</span>
 3.14159265358979 <span class="org-comment-delimiter">// </span><span class="org-comment">Float number</span>
@@ -73,66 +73,66 @@ Operations
 </pre>
 </div>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js">2 + 2
 </pre>
-</div>
+</div></div>
 
 <p>
 Use parenthesis to specify operator precedence.
 </p>
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js">(1 + 2) * (3 - 4) / 5
 </pre>
-</div>
+</div></div>
 </div>
 </div>
 
-<div id="outline-container-orgc1a7c6f" class="outline-3">
-<h3 id="orgc1a7c6f">Text</h3>
-<div class="outline-text-3" id="text-orgc1a7c6f">
+<div id="outline-container-org3665239" class="outline-3">
+<h3 id="org3665239">Text</h3>
+<div class="outline-text-3" id="text-org3665239">
 <p>
-Strings = Characters enclosed inside quotes (single quotes <code>'</code> , double quotes <code>"</code> or backticks <code>`</code>)
+Strings are characters enclosed inside quotes (single quotes <code>'</code> , double quotes <code>"</code> or backticks <code>`</code>)
 </p>
 
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js"><span class="org-string">'Sample single line text using quotes'</span>
 </pre>
-</div>
+</div></div>
 
 <p>
 To escape quote character inside of the string we use <code>\</code> in front of the quote character.
 </p>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js"><span class="org-string">`Sample multi line</span>
 <span class="org-string">  text using backticks \` `</span>
 </pre>
-</div>
+</div></div>
 
 <p>
 We can use <code>${}</code> when using backticks <code>`</code> to insert another value inside string.
 </p>
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js"><span class="org-string">`A bout de souffle, ${1960}`</span>
 </pre>
-</div>
+</div></div>
 
 <p>
 We can also use <code>+</code> operator to join strings together.
 </p>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js"><span class="org-string">'Spaghetti'</span> + <span class="org-string">' with '</span> + <span class="org-string">'tomato sauce'</span>
 </pre>
-</div>
+</div></div>
 </div>
 </div>
 
-<div id="outline-container-org4d39f76" class="outline-3">
-<h3 id="org4d39f76">Boolean</h3>
-<div class="outline-text-3" id="text-org4d39f76">
+<div id="outline-container-orgaf4b051" class="outline-3">
+<h3 id="orgaf4b051">Boolean</h3>
+<div class="outline-text-3" id="text-orgaf4b051">
 <div class="org-src-container">
 <pre class="src src-js"><span class="org-constant">true</span>
 </pre>
@@ -147,21 +147,21 @@ We can also use <code>+</code> operator to join strings together.
 Mostly used in conditionals to evaluate truthiness of given expression.
 </p>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js">1 == 1
 </pre>
-</div>
+</div></div>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js">2 == 3
 </pre>
-</div>
+</div></div>
 </div>
 </div>
 
-<div id="outline-container-org2264683" class="outline-3">
-<h3 id="org2264683">Objects</h3>
-<div class="outline-text-3" id="text-org2264683">
+<div id="outline-container-orgf05db6b" class="outline-3">
+<h3 id="orgf05db6b">Objects</h3>
+<div class="outline-text-3" id="text-orgf05db6b">
 <p>
 Key value pairs.
 </p>
@@ -184,18 +184,18 @@ Key value pairs.
 Array is defined using square brackets <code>[]</code>
 </p>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js">[33, <span class="org-string">'A'</span>, <span class="org-string">'Pizza'</span>, <span class="org-constant">false</span>, 2.45]
 </pre>
-</div>
+</div></div>
 
 <p>
 Array can also contain nested <code>array</code>
 </p>
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js">[[1, 2], [3, 4], [[5, 6], <span class="org-string">'b'</span>]]
 </pre>
-</div>
+</div></div>
 </div>
 </div>
 </div>
@@ -221,13 +221,13 @@ Allow us to give values names.
 </pre>
 </div>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js"><span class="org-keyword">let</span> <span class="org-variable-name">a</span> = 3;
 <span class="org-keyword">let</span> <span class="org-variable-name">b</span> = 7;
 
 a + b;
 </pre>
-</div>
+</div></div>
 </div>
 </div>
 
@@ -247,23 +247,23 @@ a + b;
 A <code>condition</code> represents something that is evaluated to <code>true</code> or <code>false</code>
 </p>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js"><span class="org-keyword">if</span> (2 == 7) {
   <span class="org-string">'this will not be evaluated and result is undefined'</span>;
 }
 </pre>
-</div>
+</div></div>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js"><span class="org-keyword">if</span> (<span class="org-string">'a string'</span> == <span class="org-string">'another string'</span>) {
   <span class="org-string">'this will not be evaluated'</span>;
 } <span class="org-keyword">else</span> {
   <span class="org-string">'inside of the else branch will be evaluated'</span>;
 }
 </pre>
-</div>
+</div></div>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js"><span class="org-keyword">let</span> <span class="org-variable-name">a</span> = 1;
 <span class="org-keyword">let</span> <span class="org-variable-name">b</span> = 2;
 <span class="org-keyword">let</span> <span class="org-variable-name">c</span> = 3;
@@ -278,16 +278,16 @@ A <code>condition</code> represents something that is evaluated to <code>true</c
   <span class="org-string">'nothing equals to 3'</span>
 }
 </pre>
-</div>
+</div></div>
 
 <p>
 Conditions can be combined together using "and" operator <code>&amp;&amp;</code> or "or" operator <i>||</i>.
 </p>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js">2 == 2 &amp;&amp; 3 == 3 || <span class="org-constant">false</span>;
 </pre>
-</div>
+</div></div>
 
 
 <p>
@@ -325,28 +325,28 @@ Function evaluation:
 <p>
 Functions can have parameters
 </p>
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js"><span class="org-keyword">function</span> <span class="org-function-name">plusTwo</span>(<span class="org-variable-name">n</span>) {
   <span class="org-keyword">return</span> n + 2;
 }
 
 plusTwo(31);
 </pre>
-</div>
+</div></div>
 
 <p>
 We need to make sure that value we pass as argument make sense
 otherwise the result of evaluation can be unexpected.
 </p>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js"><span class="org-keyword">function</span> <span class="org-function-name">plusFour</span>(<span class="org-variable-name">n</span>) {
   <span class="org-keyword">return</span> n + 2;
 }
 
 plusFour(<span class="org-string">'seven'</span>);
 </pre>
-</div>
+</div></div>
 
 <p>
 For now we can consider two types of functions:
@@ -379,20 +379,20 @@ Combination of these two allow us write useful programs.
 Values: <code>23</code>, <code>false</code>, <code>[2]</code>, <i>'hello'</i>, <i>window</i>, <i>window.alert</i>
 </p>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js"><span class="org-keyword">typeof</span> x; <span class="org-comment-delimiter">// </span><span class="org-comment">replace x with value</span>
 </pre>
-</div></li>
+</div></div></li>
 
 <li><p>
 2, Define variables a, b, c.
 Value of <code>a</code> should <code>10</code>, value of <code>b</code> is <code>5</code> and value of <code>c</code> combination of <code>a</code> and <code>b</code>.
 </p>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js"><span class="org-keyword">let</span> <span class="org-variable-name">a</span> <span class="org-comment-delimiter">// </span><span class="org-comment">fill the rest</span>
 </pre>
-</div></li>
+</div></div></li>
 
 <li><p>
 3, Define function that will determine a human stage of life based on age.
@@ -402,7 +402,7 @@ Value of <code>a</code> should <code>10</code>, value of <code>b</code> is <code
 The function should receive one parameter <i>age</i> as a number and return a string.
 </p>
 
-<pre class="example" id="org59cf632">
+<pre class="example" id="org5ca90f7">
 Infant = 0-1 year.
 Toddler = 2-4 yrs.
 Child = 5-12 yrs.
@@ -470,15 +470,15 @@ We can use comparison operators to compare numbers.
 </tbody>
 </table>
 
-<pre class="example" id="orge135757">
+<pre class="example" id="org01f2cd5">
 stageOfLife(7); =&gt; 'Child'
 stageOfLife(47); =&gt; 'Adult'
 </pre>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js"><span class="org-keyword">function</span> <span class="org-comment-delimiter">// </span><span class="org-comment">fill the rest</span>
 </pre>
-</div></li>
+</div></div></li>
 
 <li><p>
 4, Define function that will accept three parameters as arguments and returns result of multiplication.
@@ -511,10 +511,10 @@ stageOfLife(47); =&gt; 'Adult'
 </tbody>
 </table>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js"><span class="org-keyword">function</span> <span class="org-comment-delimiter">// </span><span class="org-comment">fill the rest</span>
 </pre>
-</div></li>
+</div></div></li>
 
 <li><p>
 5, Define function that will accept two arguments <code>name</code> and <code>language</code> and returns greeting in given language.
@@ -557,13 +557,30 @@ stageOfLife(47); =&gt; 'Adult'
 </tbody>
 </table>
 
-<div class="org-src-container">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
 <pre class="src src-js"><span class="org-comment-delimiter">// </span><span class="org-comment">fill the rest</span>
 </pre>
-</div></li>
+</div></div></li>
+</ul>
+</div>
+
+<div id="outline-container-org3b7898e" class="outline-3">
+<h3 id="org3b7898e">Homework</h3>
+<div class="outline-text-3" id="text-org3b7898e">
+<p>
+Read through documentation
+</p>
+
+<ul class="org-ul">
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach</a></li>
 </ul>
 
+
 <script type="text/javascript" src="../../assets/klipse/klipse_plugin.min.js"></script>
+</div>
 </div>
 </div>
 </div>
