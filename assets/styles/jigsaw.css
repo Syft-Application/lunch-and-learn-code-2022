@@ -1,23 +1,16 @@
-/* some style */
-
-.puzzle {
-  border: solid 1px;
+.jigsaw-puzzle {
   position: relative;
+  border: solid 1px;
 }
 
-.piece {
-  /* margin-bottom: 1px; */
-  /* margin-left: 1px; */
-  padding: 0;
+.jigsaw-piece {
   display: block;
-  float: left;
   background-repeat: no-repeat;
   box-shadow: 0px 0px 1px #ddd;
-  /* border-right: solid 1px #fff; */
+  position: absolute;
 }
 
-.ui-draggable-dragging {
-  z-index: 2;
+.jigsaw-piece.ui-draggable-dragging {
   box-shadow: 0px 0px 2px #333;
   opacity: 0.85;
 }
