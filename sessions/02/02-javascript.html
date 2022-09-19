@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,7 +19,11 @@ selector_eval_js: '.language-klipse-eval-js'
 </script>
 </head>
 <body>
-<div id="content" class="content">
+<div id="org-div-home-and-up">
+ <a accesskey="h" href=""> UP </a>
+ |
+ <a accesskey="H" href="../../index.html"> HOME </a>
+</div><div id="content" class="content">
 <header>
 <h1 class="title">Session 2 - JavaScript</h1>
 <h2 class="subtitle" role="doc-subtitle"><a href="../../index.html">Lunch And Learn Code Q4 2022</a></h2>
@@ -26,7 +31,7 @@ selector_eval_js: '.language-klipse-eval-js'
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org611fe47">Values and Data Types</a></li>
+<li><a href="#orgc5efec2">Values and Data Types</a></li>
 <li><a href="#variables">Variables</a></li>
 <li><a href="#conditionals">Conditionals</a></li>
 <li><a href="#functions">Functions</a></li>
@@ -35,9 +40,9 @@ selector_eval_js: '.language-klipse-eval-js'
 </div>
 </nav>
 
-<div id="outline-container-org611fe47" class="outline-2">
-<h2 id="org611fe47">Values and Data Types</h2>
-<div class="outline-text-2" id="text-org611fe47">
+<div id="outline-container-orgc5efec2" class="outline-2">
+<h2 id="orgc5efec2">Values and Data Types</h2>
+<div class="outline-text-2" id="text-orgc5efec2">
 <p>
 Programming Language consist of <i>keywords</i> (function, if, return ..),
 <i>values</i> (13, 'abc', true), <i>symbols</i> (;, }, {, [ &#x2026;) and <i>operators</i> (+, i,..)
@@ -53,9 +58,9 @@ We can use <i>special</i> operator <code>typeof</code> to determine type of valu
 </div>
 
 
-<div id="outline-container-orgc7ad506" class="outline-3">
-<h3 id="orgc7ad506">Numbers</h3>
-<div class="outline-text-3" id="text-orgc7ad506">
+<div id="outline-container-orga4f217c" class="outline-3">
+<h3 id="orga4f217c">Numbers</h3>
+<div class="outline-text-3" id="text-orga4f217c">
 <div class="org-src-container">
 <pre class="src src-js">123 <span class="org-comment-delimiter">// </span><span class="org-comment">Integer</span>
 3.14159265358979 <span class="org-comment-delimiter">// </span><span class="org-comment">Float number</span>
@@ -87,9 +92,9 @@ Use parenthesis to specify operator precedence.
 </div>
 </div>
 
-<div id="outline-container-org4c1f8c9" class="outline-3">
-<h3 id="org4c1f8c9">Text</h3>
-<div class="outline-text-3" id="text-org4c1f8c9">
+<div id="outline-container-orga5ab3f0" class="outline-3">
+<h3 id="orga5ab3f0">Text</h3>
+<div class="outline-text-3" id="text-orga5ab3f0">
 <p>
 Strings are characters enclosed inside quotes (single quotes <code>'</code> , double quotes <code>"</code> or backticks <code>`</code>)
 </p>
@@ -129,9 +134,9 @@ We can also use <code>+</code> operator to join strings together.
 </div>
 </div>
 
-<div id="outline-container-orgdef10af" class="outline-3">
-<h3 id="orgdef10af">Boolean</h3>
-<div class="outline-text-3" id="text-orgdef10af">
+<div id="outline-container-orgb5c11fd" class="outline-3">
+<h3 id="orgb5c11fd">Boolean</h3>
+<div class="outline-text-3" id="text-orgb5c11fd">
 <div class="org-src-container">
 <pre class="src src-js"><span class="org-constant">true</span>
 </pre>
@@ -158,9 +163,9 @@ Mostly used in conditionals to evaluate truthiness of given expression.
 </div>
 </div>
 
-<div id="outline-container-org913f043" class="outline-3">
-<h3 id="org913f043">Objects</h3>
-<div class="outline-text-3" id="text-org913f043">
+<div id="outline-container-orgb752225" class="outline-3">
+<h3 id="orgb752225">Objects</h3>
+<div class="outline-text-3" id="text-orgb752225">
 <p>
 Key value pairs.
 </p>
@@ -403,7 +408,7 @@ Value of <code>a</code> should <code>10</code>, value of <code>b</code> <code>5<
 The function should receive one parameter <i>age</i> as a number and return a string.
 </p>
 
-<pre class="example" id="org926c215">
+<pre class="example" id="orgab7cd51">
 Infant = 0-1 year.
 Toddler = 2-4 yrs.
 Child = 5-12 yrs.
@@ -471,7 +476,7 @@ We can use comparison operators to compare numbers.
 </tbody>
 </table>
 
-<pre class="example" id="org9a2e020">
+<pre class="example" id="orgca75b28">
 stageOfLife(7); =&gt; 'Child'
 stageOfLife(47); =&gt; 'Adult'
 </pre>
@@ -653,9 +658,9 @@ stageOfLife(21);
 </div>
 
 
-<div id="outline-container-orga6d8bcc" class="outline-3">
-<h3 id="orga6d8bcc">Answers submision</h3>
-<div class="outline-text-3" id="text-orga6d8bcc">
+<div id="outline-container-orgf9d050f" class="outline-3">
+<h3 id="orgf9d050f">Answers submision</h3>
+<div class="outline-text-3" id="text-orgf9d050f">
 <p>
 Please once done the exercise copy and paste your answers through google form
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1v8Ft90a66N2PxM97GasOvmKDUJA-eqXUKSgQMowjm4rFiw/viewform?usp=sf_link">https://docs.google.com/forms/d/e/1FAIpQLSc1v8Ft90a66N2PxM97GasOvmKDUJA-eqXUKSgQMowjm4rFiw/viewform?usp=sf_link</a>
@@ -664,9 +669,9 @@ Please once done the exercise copy and paste your answers through google form
 </div>
 </div>
 
-<div id="outline-container-org5dfd8a2" class="outline-3">
-<h3 id="org5dfd8a2">Homework</h3>
-<div class="outline-text-3" id="text-org5dfd8a2">
+<div id="outline-container-org02a8276" class="outline-3">
+<h3 id="org02a8276">Homework</h3>
+<div class="outline-text-3" id="text-org02a8276">
 <p>
 Read through documentation
 </p>
