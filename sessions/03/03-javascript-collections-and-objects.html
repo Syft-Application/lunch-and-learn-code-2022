@@ -362,7 +362,60 @@ Iterate over collection and produce side-effects for each element in the array.
 Output:
 </p>
 <div id="for-each-output" style="border: solid 1px; padding: 1em; min-height: 60px;"></div>
+</div>
+</div>
 
+<div id="outline-container-orgccdcfae" class="outline-3">
+<h3 id="orgccdcfae">Exercise</h3>
+<div class="outline-text-3" id="text-orgccdcfae">
+<ul class="org-ul">
+<li><p>
+Count numbers of words with at least 5 characters in sentence
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js">  <span class="org-keyword">let</span> <span class="org-variable-name">sentence</span> = <span class="org-string">`At 4:17 in the afternoon, during a high tea for passengers gathered in</span>
+<span class="org-string">the main lounge, a collision occurred, scarcely noticeable on the</span>
+<span class="org-string">whole, affecting the Scotia&#8217;s hull in that quarter a little astern of</span>
+<span class="org-string">its port paddle wheel.`</span>
+
+
+</pre>
+</div></div>
+
+<p><a href="#exercise-6-hint-1" class="toggle-hint">Solution</a></p>
+<div id="exercise-6-hint-1" class="hint" >
+
+<div class="org-src-container">
+<pre class="src src-js">sentence.split(<span class="org-string">' '</span>)
+.filter(<span class="org-keyword">function</span> (<span class="org-variable-name">w</span>) { <span class="org-keyword">return</span> w.length &gt; 5; })
+.length
+</pre>
+</div>
+
+</div></li>
+
+<li><p>
+Create new collection that will contain multiple of 5 of each element in initial array
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">let</span> <span class="org-variable-name">ary</span> = [3, 7, 5, 21, 17];
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">your code comes here</span>
+</pre>
+</div></div>
+
+<p><a href="#exercise-7-hint-1" class="toggle-hint">Solution</a></p>
+<div id="exercise-7-hint-1" class="hint" >
+
+<div class="org-src-container">
+<pre class="src src-js">ary.map(<span class="org-keyword">function</span> (<span class="org-variable-name">number</span>) { <span class="org-keyword">return</span> number * 5; });
+</pre>
+</div>
+
+</div></li>
+</ul>
 
 <script type="text/javascript" src="../../assets/klipse/klipse_plugin.min.js"></script>
 </div>
