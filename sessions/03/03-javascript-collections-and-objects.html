@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Session 3: JavaScript Objects and Collections</title>
+<meta name="generator" content="Org Mode" />
+<link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="../../assets/styles/vendor/normalize.css"/>
+<link rel="stylesheet" type="text/css" href="../../assets/styles/vendor/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="../../assets/klipse/codemirror.css">
+<link rel="stylesheet" type="text/css" href="../../assets/styles/main.css"/>
+<script type="text/javascript" src="../../assets/scripts/vendor/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../assets/scripts/main.js"></script>
+<script>
+window.klipse_settings = {
+selector_eval_js: '.language-klipse-eval-js'
+};
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+<a accesskey="h" href="#org-div-home-and-up"> UP </a>
+<span> | </span>
+<a accesskey="H" href="../../index.html"> HOME </a>
+</div><div id="content" class="content">
+<header>
+<h1 class="title">Session 3: JavaScript Objects and Collections</h1>
+<h2 class="subtitle" role="doc-subtitle"><a href="../../index.html">Lunch And Learn Code Q4 2022</a></h2>
+</header><nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#objects">Objects</a></li>
+<li><a href="#collections">Collections</a></li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-objects" class="outline-2">
+<h2 id="objects">Objects</h2>
+<div class="outline-text-2" id="text-objects">
+<p>
+Definition: An object is a thing with properties and behaviour.
+In JavaScript objects are represented by curly brackets <code>{}</code>
+Which may contain properties.
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-comment-delimiter">// </span><span class="org-comment">object describing a chair</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">assigned to local variable named "chair"</span>
+<span class="org-keyword">let</span> <span class="org-variable-name">chair</span> = {
+  colour: <span class="org-string">'red'</span>,
+  legs: 4,
+  material: <span class="org-string">'wood'</span>
+}
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">object describing a shift with</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">nested object describing an employer</span>
+<span class="org-keyword">let</span> <span class="org-variable-name">shift</span> = {
+  id: 21,
+  start_time: <span class="org-string">'2022-09-27T09:00:00.000Z'</span>,
+  end_time: <span class="org-string">'2022-09-27T17:00:00.000Z'</span>,
+  employer: { id: 1, name: <span class="org-string">'Acme Co.'</span> }
+}
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">object describing a person</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">including also behaviour "greet"</span>
+<span class="org-keyword">let</span> <span class="org-variable-name">person</span> = {
+  first_name: <span class="org-string">'Jules'</span>,
+  last_name: <span class="org-string">'Verne'</span>,
+  age: 27,
+  <span class="org-function-name">greet</span>: <span class="org-keyword">function</span> () { <span class="org-keyword">return</span> <span class="org-string">'bonjour'</span> }
+}
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">assign value to property of object</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">shift.worker = person;</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">shift.worker.greet();</span>
+</pre>
+</div></div>
+
+<p>
+We can represent different types (classes) of objects in JavaScript but for our purposes
+we are not going to focus on that. Classes are represented in language using words with
+capital first letter. (Example: <code>'abc'</code> is an object of class <code>String</code>)
+</p>
+
+<p>
+Needless to say that all values in JavaScript are objects and such have properties and
+also behaviour. <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
+</p>
+
+<p>
+Property value are defined in terms of primitive values (numbers, strings, true, false, array..)
+and are accessed using dot and name of the property. <code>person.age</code> <sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
+</p>
+
+<p>
+Behaviour of object is defined using functions. Function defined on object is called <b>method</b>.
+</p>
+
+
+<p>
+Example:
+</p>
+
+<p>
+We can find out number of characters in a string by accessing his property <code>length</code>
+</p>
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-string">'Around the World in Eighty Days'</span>.length;
+</pre>
+</div></div>
+
+<p>
+We can convert string from lower case letter to upper case letters
+by invoking behavior using method <code>.toUpperCase()</code>.
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-string">'Captain Nemo'</span>.toUpperCase();
+</pre>
+</div></div>
+
+<p>
+To find out what behaviour we can invoke on built-in objects is best
+to consult documentation.
+Example: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String documentation on MDN website</a>
+</p>
+</div>
+
+<div id="outline-container-org8c7af9b" class="outline-3">
+<h3 id="org8c7af9b">Exercise</h3>
+<div class="outline-text-3" id="text-org8c7af9b">
+<ul class="org-ul">
+<li><p>
+Find out how many characters are in the string
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-string">'The Child of the Cavern'</span>
+</pre>
+</div></div>
+
+<p><a href="#exercise-1-hint-1" class="toggle-hint">Solution</a></p>
+<div id="exercise-1-hint-1" class="hint" >
+
+<div class="org-src-container">
+<pre class="src src-js"><span class="org-string">'The Child of the Cavern'</span>.length; <span class="org-comment-delimiter">// </span><span class="org-comment">=&gt; 23</span>
+</pre>
+</div>
+
+</div></li>
+
+<li><p>
+Replace word 'Three' with 'Five' in sentence using method <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">.replace(pattern, replacement)</a>
+</p>
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-string">'Three Weeks in a Balloon'</span>
+</pre>
+</div></div>
+
+<p><a href="#exercise-2-hint-1" class="toggle-hint">Solution</a></p>
+<div id="exercise-2-hint-1" class="hint" >
+
+<div class="org-src-container">
+<pre class="src src-js"><span class="org-string">'Three Weeks in a Balloon'</span>.replace(<span class="org-string">'Three'</span>, <span class="org-string">'Five'</span>);
+</pre>
+</div>
+
+</div></li>
+
+<li><p>
+Split a string to collection of words using method <code>split</code> and <code>' '</code> as an argument.
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-string">'Journey to the Center of the Earth'</span>
+</pre>
+</div></div>
+
+<p><a href="#exercise-3-hint-1" class="toggle-hint">Solution</a></p>
+<div id="exercise-3-hint-1" class="hint" >
+
+<div class="org-src-container">
+<pre class="src src-js"><span class="org-string">'Journey to the Center of the Earth'</span>.split(<span class="org-string">' '</span>);
+</pre>
+</div>
+
+</div></li>
+
+<li><p>
+Find out how many items are in collection by accessing its property <code>length</code>
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js">[<span class="org-string">'From'</span>, <span class="org-string">'the'</span>, <span class="org-string">'Earth'</span>, <span class="org-string">'to'</span>, <span class="org-string">'the'</span>, <span class="org-string">'Moon'</span>]
+</pre>
+</div></div>
+
+<p><a href="#exercise-4-hint-1" class="toggle-hint">Solution</a></p>
+<div id="exercise-4-hint-1" class="hint" >
+
+<div class="org-src-container">
+<pre class="src src-js">[<span class="org-string">'From'</span>, <span class="org-string">'the'</span>, <span class="org-string">'Earth'</span>, <span class="org-string">'to'</span>, <span class="org-string">'the'</span>, <span class="org-string">'Moon'</span>].length;
+</pre>
+</div>
+
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-collections" class="outline-2">
+<h2 id="collections">Collections</h2>
+<div class="outline-text-2" id="text-collections">
+<p>
+Array: Sequence of values inside of square brackets <code>[]</code>, seperated by commas. (<code>[2, 3, 4]</code>)
+Array's are also objects and have properties and behaviour.
+We can access nth element of array using square brackets and index.
+Item's in array are indexed from <b>0</b>.
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">let</span> <span class="org-variable-name">arry</span> = [2, 3, 4, 5];
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">arry.length;</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">arry[0]; // =&gt; 2</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">arry[2]; // =&gt; 4</span>
+</pre>
+</div></div>
+
+<p>
+We can manipulate the collection by invoking methods defined on Array object.
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">let</span> <span class="org-variable-name">arry1</span> = [4, 2];
+<span class="org-keyword">let</span> <span class="org-variable-name">arr2</span> = [8, 6];
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">join two arrays together</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">arry1.concat(arr2);</span>
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">sort the result</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">arry1.concat(arr2).sort();</span>
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">reverse in oposite order</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">arry1.concat(arr2).sort().reverse();</span>
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">check if array contains specific value</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">arry1.includes(6);</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">arry1.concat(arr2).includes(6);</span>
+</pre>
+</div></div>
+
+<p>
+More:
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods</a>
+</p>
+
+<p>
+We can transform the collections by providing functions to methods as an argument.
+</p>
+</div>
+
+<div id="outline-container-org7f7de04" class="outline-3">
+<h3 id="org7f7de04">Filter</h3>
+<div class="outline-text-3" id="text-org7f7de04">
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">let</span> <span class="org-variable-name">sentence</span> = <span class="org-string">'While these catastrophes were taking place upon the land and the sea, a scene not less thrilling was enacting in the disordered heavens.'</span>
+<span class="org-keyword">let</span> <span class="org-variable-name">words</span> = sentence.split(<span class="org-string">' '</span>);
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">collection of words with minimum 5 characters</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">words.filter(function (word) { return word.length &gt;= 5; });</span>
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">collection of words starting with letter t</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">words.filter(function (word) { return word.at(0) == 't' })</span>
+</pre>
+</div></div>
+</div>
+</div>
+
+<div id="outline-container-org007ba8b" class="outline-3">
+<h3 id="org007ba8b">Map (transform)</h3>
+<div class="outline-text-3" id="text-org007ba8b">
+<p>
+Create new collection from original collection.
+</p>
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">let</span> <span class="org-variable-name">words</span> = <span class="org-string">'While these catastrophes were taking place upon the land and the sea, a scene not less thrilling was enacting in the disordered heavens.'</span>
+    .split(<span class="org-string">' '</span>);
+
+<span class="org-keyword">let</span> <span class="org-variable-name">words5</span> = words.filter(<span class="org-keyword">function</span> (<span class="org-variable-name">word</span>) { <span class="org-keyword">return</span> word.length &gt;= 5; });
+<span class="org-comment-delimiter">// </span><span class="org-comment">convert collection of words words5 to be all upper case</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">words5.map(</span>
+<span class="org-comment-delimiter">//   </span><span class="org-comment">function (word) {</span>
+<span class="org-comment-delimiter">//     </span><span class="org-comment">return word.toUpperCase();</span>
+<span class="org-comment-delimiter">//   </span><span class="org-comment">}</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">)</span>
+</pre>
+</div></div>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8acb534" class="outline-3">
+<h3 id="org8acb534">Reduce (transform)</h3>
+<div class="outline-text-3" id="text-org8acb534">
+<p>
+Create "single" value from collection.
+</p>
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">let</span> <span class="org-variable-name">ages</span> = [17, 21, 33, 43];
+
+ages.reduce(
+  <span class="org-keyword">function</span> (<span class="org-variable-name">accumulated</span>, <span class="org-variable-name">number</span>) {
+    <span class="org-keyword">return</span> accumulated + number;
+  }
+)
+</pre>
+</div></div>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce</a>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org4a4f9f6" class="outline-3">
+<h3 id="org4a4f9f6">For each</h3>
+<div class="outline-text-3" id="text-org4a4f9f6">
+<p>
+Iterate over collection and produce side-effects for each element in the array.
+</p>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach</a>
+</p>
+
+
+<div class="language-klipse-eval-js" ><div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">let</span> <span class="org-variable-name">container</span> = document.getElementById(<span class="org-string">'for-each-output'</span>);
+<span class="org-keyword">let</span> <span class="org-variable-name">grants_family</span>  = [<span class="org-string">'Tom Grant'</span>, <span class="org-string">'Robert Grant'</span>, <span class="org-string">'Mary Grant'</span>];
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">container.innerHTML = '';</span>
+<span class="org-keyword">function</span> <span class="org-function-name">insertMember</span> (<span class="org-variable-name">member</span>) {
+  container.appendChild(document.createTextNode(member));
+  container.appendChild(document.createElement(<span class="org-string">'br'</span>));
+}
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">grants_family.forEach(insertMember);</span>
+</pre>
+</div></div>
+
+<p>
+Output:
+</p>
+<div id="for-each-output" style="border: solid 1px; padding: 1em; min-height: 60px;"></div>
+
+
+<script type="text/javascript" src="../../assets/klipse/klipse_plugin.min.js"></script>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Numbers behave slightly differently and in order to access properties or invoke behaviour we need to initialize them explicitly as object <code>Number(3)</code>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+If property name contains space we access the value using square bracket and name of the property as a string inside (<code>person['full name']</code>)
+</p></div></div>
+
+
+</div>
+</div></div>
+</body>
+</html>
