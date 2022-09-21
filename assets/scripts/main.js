@@ -1,24 +1,22 @@
-// inspired by
-// https://github.com/fniessen/org-html-themes
-function tabifySections() {
-  const $tabs = $('<ul>', { id: 'tabs' });
-  document.querySelectorAll('.outline-2 > h2')
-      .forEach((el) => {
-        $el = $(el);
-        $tabs.append(
-          $('<li>')
-            .prepend($('<a>', {
-              href: '#' + $el.parent().attr('id'),
-              text: $el.text()
-            })));
-        $el.remove();
-      });
+document.addEventListener('click', function(event) {
+  let target = event.target;
+  let tagName = target.tagName;
 
-  // $('h1.title').after($tabs);
-  $('#content > header').after($tabs);
-}
+  if (tagName && 'BUTTON' && target.classList.contains('revealable-button')) {
+    return event
+      .target
+      .closest('.revealable-block')
+      .classList
+      .toggle('revealable-visible');
+  }
 
-$(document).ready(function() {
-  // tabifySections();
-  // $('#content').tabs();
+  if (tagName == 'A' && target.classList.contains('toggle-hint')) {
+    event.preventDefault();
+    return document.getElementById(target.getAttribute('href').slice(1))
+      .classList
+      .toggle('hint-visible');
+  }
+});
+
+document.addEventListener('click', function(event) {
 });

@@ -116,3 +116,35 @@ h2.subtitle {
 .klipse-separator {
 
 }
+
+button {
+  padding: 0.25em 1.25em;
+}
+
+.hint-block {
+  margin-bottom: 1em;
+}
+
+.revealable-block {
+
+}
+
+.revealable-header {
+}
+
+.revealable-body {
+  padding-top: 1em;
+  display: none;
+}
+
+.revealable-visible > .revealable-body {
+  display: block;
+}
+
+.hint {
+  display: none;
+}
+
+.hint-visible {
+  display: block;
+}
