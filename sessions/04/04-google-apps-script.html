@@ -35,7 +35,12 @@ integrate with and automate tasks across Google products.
 <div id="outline-container-orge545e14" class="outline-2">
 <h2 id="orge545e14">Live Demo</h2>
 <div class="outline-text-2" id="text-orge545e14">
+<p>
+Sample spreadsheet
+<a href="https://docs.google.com/spreadsheets/d/15DyXFn-M8VCg9FTVjRcJXmq9oF7Ommw89UIBZCllWV4/edit#gid=0">https://docs.google.com/spreadsheets/d/15DyXFn-M8VCg9FTVjRcJXmq9oF7Ommw89UIBZCllWV4/edit#gid=0</a>
+</p>
 </div>
+
 <div id="outline-container-org9bc062d" class="outline-3">
 <h3 id="org9bc062d">Start</h3>
 </div>
@@ -47,6 +52,52 @@ integrate with and automate tasks across Google products.
 </div>
 <div id="outline-container-org2b6fd14" class="outline-3">
 <h3 id="org2b6fd14">Output of execution</h3>
+<div class="outline-text-3" id="text-org2b6fd14">
+<p>
+Logging output to console.
+</p>
+<div class="org-src-container">
+<pre class="src src-js">Logger.log(<span class="org-string">'-t- test'</span>);
+</pre>
+</div>
+
+<p>
+Displaying popup windown in spreadsheet
+</p>
+
+<div class="org-src-container">
+<pre class="src src-js">SpreadsheetApp.getUi().alert(<span class="org-string">'message'</span>);
+</pre>
+</div>
+
+<p>
+Displaying popup on spreadsheet opening
+</p>
+<div class="org-src-container">
+<pre class="src src-js">
+<span class="org-keyword">function</span> <span class="org-function-name">greetUser</span>() {
+  SpreadsheetApp.getUi().alert(<span class="org-string">'Hello spreadsheet visitor'</span>);
+}
+
+<span class="org-keyword">function</span> <span class="org-function-name">installTrigger</span> () {
+  ScriptApp.newTrigger(<span class="org-string">'greetUser'</span>)
+    .forSpreadsheet(ss)
+    .onOpen()
+    .create();
+}
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0862278" class="outline-2">
+<h2 id="org0862278">Documentation</h2>
+<div class="outline-text-2" id="text-org0862278">
+<p>
+<a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet">https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet</a>
+</p>
 </div>
 </div>
 
